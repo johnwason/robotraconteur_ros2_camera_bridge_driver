@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "robotraconteur-ros2-camera-bridge-driver"
+version = "0.1.0"
+authors = [
+    {name = "John Wason", email = "wason@wasontech.com"}
+]
+description = "Robot Raconteur camera driver using ROS 2 camera topic"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+dependencies = [
+    "robotraconteur",
+    "robotraconteurcompanion",
+    "opencv-contrib-python"
+]
+readme = "README.md"
+
+[project.scripts]
+robotraconteur-ros2-camera-bridge-driver = "robotraconteur_ros2_camera_bridge_driver:main"
+
+[tool.setuptools]
+py-modules = [
+    "robotraconteur_ros2_camera_bridge_driver"
+]
