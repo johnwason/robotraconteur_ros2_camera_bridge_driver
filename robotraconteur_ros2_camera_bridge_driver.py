@@ -237,7 +237,7 @@ def main():
 
     camera = CameraImpl(args.ros_topic, camera_info, ros_node)
 
-    with RR.ServerNodeSetup("com.robotraconteur.imaging.camera", 59824, argv=rr_args):
+    with RR.ServerNodeSetup("robotraconteur_ros2_camera_bridge_driver", 59824, argv=rr_args):
 
         service_ctx = RRN.RegisterService("camera", "com.robotraconteur.imaging.Camera", camera)
         service_ctx.SetServiceAttributes(camera_attributes)
